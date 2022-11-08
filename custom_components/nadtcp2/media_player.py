@@ -189,7 +189,7 @@ class NADEntity(MediaPlayerEntity):
         await self._client.select_source(source)
 
     async def async_added_to_hass(self):
-        from nadtcp import NADReceiverTCPC338, \
+        from .nadtcp import NADReceiverTCPC338, \
             CMD_POWER, CMD_VOLUME, CMD_MUTE, CMD_SOURCE
 
         def state_changed_cb(state):
